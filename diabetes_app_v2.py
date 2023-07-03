@@ -122,7 +122,10 @@ def diabetes_pred(model_diabetes,age,bmi, smoker, physactivity,
 def main():
     try:
         st.title("Diabetes Prediction")
-        st.write('(XGBoost Model - By RPA ST & IFRS9)')
+        st.write('(XGBoost Model - By RPA ST & IFRS9. Data from Kaggle.)')
+        st.header("Questions to investigate")
+        st.write("Q1: What is the biggest risk factor for diabetes?") 
+                 
 
         in_age = int(st.text_input("Age",value="30"))
         in_bmi=int(st.text_input("BMI",value="20"))
