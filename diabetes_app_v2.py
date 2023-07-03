@@ -109,6 +109,7 @@ def diabetes_pred(model_diabetes,age,bmi, smoker, physactivity,
     df['genhlth']=[genhlth]
     
     pred=model_diabetes.predict_proba(df)[:,1]
+    prob=pred[0]
     
 
     
@@ -120,7 +121,7 @@ def diabetes_pred(model_diabetes,age,bmi, smoker, physactivity,
 
 def main():
     try:
-        st.title("Diabetes Prediction Model")
+        st.title("Diabetes Prediction")
         st.write('(XGBoost Model)')
 
         in_age = int(st.number_input("Age"))
@@ -135,15 +136,17 @@ def main():
 
         x1,x2,x3,x4,x5,x6,x7,x8=diabetes_pipe(in_age, in_bmi, in_smoker,in_physactivity,in_fruits,
                                               in_veggies, in_hvyalcoholconsump, in_genhlth)
-        prob=diabetes_pred(load_model,x1,x2,x3,x4,x5,x6,x7,x8)
-        
+        pred=diabetes_pred(load_model,x1,x2,x3,x4,x5,x6,x7,x8)
+        prob=round(pred[0]*100,2)
         
         
     
 
     
     except Exception as e:
-        st.write(f'<p style="font-size:24px; color:blue;">Error message: *{e}*</p>',unsafe_allow_html=True)
+        #print("Error occured. Error type is",type(e).__name__)
+        st.write(f'<p style="font-size:24px; color:blue;">Error message: *{type(e).__name__}*</p>',unsafe_allow_html=True)
+
     
     else:
         st.write('<p style="font-size:30px; color:red;">***Result:***</p>',unsafe_allow_html=True)
