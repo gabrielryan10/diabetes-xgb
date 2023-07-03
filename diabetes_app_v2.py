@@ -135,8 +135,8 @@ def main():
 
         x1,x2,x3,x4,x5,x6,x7,x8=diabetes_pipe(in_age, in_bmi, in_smoker,in_physactivity,in_fruits,
                                               in_veggies, in_hvyalcoholconsump, in_genhlth)
-        score=diabetes_pred(load_model,x1,x2,x3,x4,x5,x6,x7,x8)
-        prob=score
+        prob=diabetes_pred(load_model,x1,x2,x3,x4,x5,x6,x7,x8)
+        
         
         
     
