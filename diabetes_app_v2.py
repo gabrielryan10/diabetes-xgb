@@ -120,7 +120,7 @@ def diabetes_pred(model_diabetes,age,bmi, smoker, physactivity,
 
 def main():
     try:
-        st.title("Diabetes Prediction")
+        st.title("Diabetes Prediction Model")
         st.write('(XGBoost Model)')
 
         in_age = int(st.number_input("Age"))
