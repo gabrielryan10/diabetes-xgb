@@ -121,12 +121,17 @@ def diabetes_pred(model_diabetes,age,bmi, smoker, physactivity,
 
 def main():
     try:
-        st.title("Diabetes Prediction")
-        st.write('(XGBoost Model - By RPA ST & IFRS9. Data from Kaggle.)')
-        st.header("Questions to investigate")
-        st.write("Q1: What is the biggest risk factor for diabetes?") 
-                 
+        st.write('<p style="font-size:30px; color:black;">************************************</p>',unsafe_allow_html=True)
 
+        st.title("Welcome to Diabetes Prediction Challenge")
+        st.write('(XGBoost Model - By RPA ST & IFRS9. Data from Kaggle. This is for games purpose only)')
+        st.write('<p style="font-size:30px; color:black;">************************************</p>',unsafe_allow_html=True)
+        st.header("Questions to investigate:")
+        st.write("Q1: What is the biggest risk factor for diabetes?")
+        st.write("Q2: What limitations do you note about the predictions?")
+        st.write('<p style="font-size:30px; color:black;">************************************</p>',unsafe_allow_html=True)
+                 
+        st.header("Diabetes Risk Factors")
         in_age = int(st.text_input("Age",value="30"))
         in_bmi=int(st.text_input("BMI",value="20"))
         in_smoker = st.selectbox("Do you smoke?", ["Yes","No"])
