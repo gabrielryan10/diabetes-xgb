@@ -122,7 +122,7 @@ def diabetes_pred(model_diabetes,age,bmi, smoker, physactivity,
 def main():
     try:
         st.title("Diabetes Prediction")
-        st.write('(XGBoost Model)')
+        st.write('(XGBoost Model - By RPA ST & IFRS9)')
 
         in_age = int(st.text_input("Age",value="30"))
         in_bmi=int(st.text_input("BMI",value="20"))
