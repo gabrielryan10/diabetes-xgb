@@ -124,8 +124,8 @@ def main():
         st.title("Diabetes Prediction")
         st.write('(XGBoost Model)')
 
-        in_age = int(st.text_input("Age"))
-        in_bmi=int(st.text_input("BMI"))
+        in_age = int(st.text_input("Age",value="30"))
+        in_bmi=int(st.text_input("BMI",value="20"))
         in_smoker = st.selectbox("Do you smoke?", ["Yes","No"])
         in_physactivity = st.selectbox("Do you exercise?", ["Yes","No"])
         in_fruits = st.selectbox("Do you eat fruits regularly?", ["Yes","No"])
