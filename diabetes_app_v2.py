@@ -145,7 +145,7 @@ def main():
     
     except Exception as e:
         #print("Error occured. Error type is",type(e).__name__)
-        st.write(f'<p style="font-size:24px; color:blue;">Error message: *{type(e).__name__}*</p>',unsafe_allow_html=True)
+        st.write(f'<p style="font-size:24px; color:blue;">Error message: *{e}*</p>',unsafe_allow_html=True)
 
     
     else:
