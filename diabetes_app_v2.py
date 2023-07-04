@@ -129,6 +129,7 @@ def main():
         st.header("Questions to investigate:")
         st.write("Q1: What is the biggest risk factor for diabetes?")
         st.write("Q2: What limitations do you note about the predictions?")
+        st.write("Q2: Which is more beneficial for preventing diabetes: consuming more vegetables or more fruits?")
         st.write('<p style="font-size:30px; color:black;">************************************</p>',unsafe_allow_html=True)
                  
         st.header("Diabetes Risk Factors")
