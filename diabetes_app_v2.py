@@ -133,14 +133,14 @@ def main():
         st.write('<p style="font-size:30px; color:black;">************************************</p>',unsafe_allow_html=True)
                  
         st.header("Diabetes Risk Factors")
-        in_age = int(st.text_input("Age",value="30"))
-        in_bmi=int(st.text_input("BMI",value="20"))
+        in_age = int(st.text_input("Age",value="40"))
+        in_bmi=int(st.text_input("BMI",value="24"))
         in_smoker = st.selectbox("Do you smoke?", ["Yes","No"])
         in_physactivity = st.selectbox("Do you exercise?", ["Yes","No"])
         in_fruits = st.selectbox("Do you eat fruits regularly?", ["Yes","No"])
         in_veggies = st.selectbox("Do you eat vegetables regularly?", ["Yes","No"])
         in_hvyalcoholconsump = st.selectbox("Are you a heavy alcohol consumer?", ["Yes","No"])
-        in_genhlth = st.selectbox("Rate your general health", ["Excellent","Fair","Relatively Poor","Very Poor"])
+        in_genhlth = st.selectbox("Rate your general health", ["Excellent","Fair","Relatively Poor","Very Poor"],index=1)
     
 
         x1,x2,x3,x4,x5,x6,x7,x8=diabetes_pipe(in_age, in_bmi, in_smoker,in_physactivity,in_fruits,
