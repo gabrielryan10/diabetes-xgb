@@ -134,7 +134,7 @@ def main():
                  
         st.header("Diabetes Risk Factors")
         in_age = int(st.text_input("Age",value="40"))
-        in_bmi=int(st.text_input("BMI",value="24"))
+        in_bmi=int(st.text_input("BMI (integer)",value="24"))
         in_smoker = st.selectbox("Do you smoke?", ["Yes","No"])
         in_physactivity = st.selectbox("Do you exercise?", ["Yes","No"])
         in_fruits = st.selectbox("Do you eat fruits regularly?", ["Yes","No"])
